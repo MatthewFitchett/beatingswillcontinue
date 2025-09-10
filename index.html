@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The beatings will continue until morale improves</title>
+  <meta name="description" content="A tongue‑in‑cheek motivational page. Minimal, modern, and a bit cheeky." />
+  <meta property="og:title" content="The beatings will continue until morale improves" />
+  <meta property="og:description" content="A tongue‑in‑cheek motivational page. Minimal, modern, and a bit cheeky." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://og-playground.vercel.app/api/card?title=The%20beatings%20will%20continue%20until%20morale%20improves" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Google Fonts for a modern + quirky combo -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f14;        /* near black */
+      --fg: #e5e7eb;        /* gray-200 */
+      --muted: #9ca3af;     /* gray-400 */
+      --accent: #a78bfa;    /* violet-300 */
+      --accent-2: #34d399;  /* emerald-400 */
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fafafa;
+        --fg: #111827;
+        --muted: #6b7280;
+        --accent: #7c3aed;
+        --accent-2: #059669;
+      }
+    }
+
+    html, body { height: 100%; }
+    body {
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(167,139,250,0.08), transparent),
+                  radial-gradient(1200px 800px at 90% 90%, rgba(52,211,153,0.08), transparent),
+                  var(--bg);
+      color: var(--fg);
+      font-family: Manrope, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .logo svg {
+      width: 220px;
+      height: auto;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.25));
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .poster {
+      width: min(92vw, 900px);
+      aspect-ratio: 3 / 2;
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.06);
+      background: linear-gradient(160deg, rgba(255,255,255,.04), rgba(255,255,255,0))
+                  , radial-gradient(1200px 800px at 30% 20%, rgba(167,139,250,0.15), transparent)
+                  , radial-gradient(1200px 800px at 90% 90%, rgba(52,211,153,0.15), transparent)
+                  , #0f1623;
+    }
+
+    .poster .noise {
+      position: absolute; inset: 0;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" opacity="0.035" filter="url(%23n)"/></svg>');
+      pointer-events: none;
+    }
+
+    .poster .frame {
+      position: absolute; inset: 24px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      overflow: hidden;
+      display: grid; place-items: center;
+      padding: clamp(16px, 3vw, 32px);
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: .95rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .footer { color: var(--muted); }
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* fun wobble on hover */
+    .wobble:hover { animation: wobble .6s ease-in-out; }
+    @keyframes wobble {
+      0%,100%{ transform: rotate(0deg) }
+      20%{ transform: rotate(2deg) }
+      40%{ transform: rotate(-2deg) }
+      60%{ transform: rotate(1.5deg) }
+      80%{ transform: rotate(-1.5deg) }
+    }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2254%22 x=%2210%22 font-size=%2250%22>🥲</text></svg>">
+</head>
+<body>
+  <header class="container py-4 d-flex align-items-center justify-content-between">
+    <div class="logo d-flex align-items-center gap-3">
+      <!-- Simple quirky SVG logo -->
+      <svg viewBox="0 0 520 120" role="img" aria-label="Site logo" class="wobble">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#a78bfa"/>
+            <stop offset="100%" stop-color="#34d399"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#g1)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 30 a30 30 0 1 0 0.1 0Z" />
+          <path d="M44 50 q16 10 32 0" />
+          <path d="M50 40 h6" />
+          <path d="M70 40 h6" />
+          <path d="M96 18 l26 -10 m-18 24 l26 -10 m-18 24 l26 -10" />
+        </g>
+        <text x="140" y="78" fill="url(#g1)" font-family="Manrope, system-ui, sans-serif" font-size="44" font-weight="800" letter-spacing="1">morale improves</text>
+      </svg>
+    </div>
+    <div class="text-end small tagline">A funny motivational project</div>
+  </header>
+
+  <main class="hero container">
+    <!-- Centerpiece "picture" containing the phrase -->
+    <figure class="poster" aria-label="Poster with the catchphrase">
+      <div class="noise"></div>
+      <div class="frame">
+        <!-- The text is drawn as SVG to feel like an actual poster image -->
+        <svg viewBox="0 0 1200 800" width="100%" height="100%" role="img" aria-labelledby="title desc">
+          <title id="title">The beatings will continue until morale improves</title>
+          <desc id="desc">Poster-style artwork displaying the phrase in bold, playful typography.</desc>
+
+          <defs>
+            <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#e5e7eb"/>
+              <stop offset="100%" stop-color="#c7d2fe"/>
+            </linearGradient>
+            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity="0.35"/>
+            </filter>
+            <!-- squiggles -->
+            <path id="squig" d="M0 10 C 40 -10, 80 30, 120 10 S 200 -10, 240 10" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="6" stroke-linecap="round"/>
+          </defs>
+
+          <rect x="0" y="0" width="1200" height="800" fill="url(#bg)" fill-opacity="0"/>
+
+          <!-- decorative squiggles -->
+          <g opacity="0.6">
+            <use href="#squig" x="80" y="90"/>
+            <use href="#squig" x="780" y="680" transform="scale(-1,1)"/>
+          </g>
+
+          <g filter="url(#shadow)" fill="url(#ink)">
+            <text x="50%" y="240" text-anchor="middle" font-family="Caveat, system-ui, sans-serif" font-size="80" font-weight="700" letter-spacing="2">The beatings will</text>
+
+            <text x="50%" y="400" text-anchor="middle" font-family="Manrope, system-ui, sans-serif" font-size="140" font-weight="800" letter-spacing="1">CONTINUE</text>
+
+            <text x="50%" y="540" text-anchor="middle" font-family="Caveat, system-ui, sans-serif" font-size="80" font-weight="700" letter-spacing="2">until morale</text>
+
+            <text x="50%" y="700" text-anchor="middle" font-family="Manrope, system-ui, sans-serif" font-size="120" font-weight="800" letter-spacing="1">IMPROVES</text>
+          </g>
+        </svg>
+      </div>
+    </figure>
+
+    <div class="mt-4 small text-secondary">
+      Tip: replace the SVG above with your own image by swapping the <code>&lt;svg&gt;</code> block for an <code>&lt;img src="your-image.jpg" class="img-fluid" alt="Poster"&gt;</code>.
+    </div>
+
+    <div class="mt-5">
+      <button id="encourage" class="btn btn-lg btn-outline-light px-4">Administer Encouragement</button>
+    </div>
+  </main>
+
+  <footer class="container py-5 footer">
+    <div class="row align-items-center g-3">
+      <div class="col-md">
+        &copy; <span id="year"></span> The beatings will continue until morale improves.
+      </div>
+      <div class="col-md text-md-end">
+        <a href="#" id="toggleTheme" class="me-3">Toggle theme</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Silly confetti for the "encouragement" button
+    const btn = document.getElementById('encourage');
+    btn?.addEventListener('click', () => {
+      // quick confetti using simple emojis
+      const count = 24;
+      for (let i = 0; i < count; i++) {
+        const s = document.createElement('div');
+        s.textContent = ['🎉','✨','🥲','💥','🎈','⭐️'][Math.floor(Math.random()*6)];
+        Object.assign(s.style, {
+          position: 'fixed',
+          left: (btn.getBoundingClientRect().left + btn.offsetWidth/2) + 'px',
+          top: (btn.getBoundingClientRect().top) + 'px',
+          pointerEvents: 'none',
+          fontSize: (Math.random()*18+14)+'px',
+          transform: `translate(-50%, -50%) rotate(${(Math.random()*60-30)}deg)`,
+          transition: 'transform 900ms cubic-bezier(.2,.8,.2,1), opacity 900ms',
+          opacity: '1',
+          zIndex: 9999
+        });
+        document.body.appendChild(s);
+        requestAnimationFrame(() => {
+          s.style.transform = `translate(${(Math.random()*2-1)*220}px, ${Math.random()*-240-160}px)`;
+          s.style.opacity = '0';
+        });
+        setTimeout(() => s.remove(), 1000);
+      }
+    });
+
+    // Light/Dark toggle by flipping a data attribute (affects color scheme vars if you extend it)
+    document.getElementById('toggleTheme')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const light = document.documentElement.getAttribute('data-theme') === 'light';
+      document.documentElement.setAttribute('data-theme', light ? 'dark' : 'light');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHzp" crossorigin="anonymous"></script>
+</body>
+</html>
